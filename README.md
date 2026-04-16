@@ -1,7 +1,7 @@
 1. View the Project Overview (The "Documentation")
 If you are looking for the "About" or documentation for this specific project, most Lovable apps have a "Share" or "View Code" page if they are public. You can typically find the project overview at:
 
-Main Project Page: https://lovable.dev/projects/stranger-x (Note: This depends on the creator's privacy settings).
+Main Project Page: https://stranger-x.lovable.app/
 
 2. Project Features
 Based on the application name "Stranger-X" and typical Lovable templates, this project likely includes:
