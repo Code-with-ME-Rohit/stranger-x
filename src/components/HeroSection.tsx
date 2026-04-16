@@ -1,63 +1,133 @@
 import { motion } from "framer-motion";
+import { ArrowRight, Sparkles, Code2, Cloud } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-6">
-      {/* Background grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(hsl(222_30%_18%/0.3)_1px,transparent_1px),linear-gradient(90deg,hsl(222_30%_18%/0.3)_1px,transparent_1px)] bg-[size:60px_60px]" />
-      
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-primary font-mono text-sm tracking-widest uppercase mb-4"
-        >
-          Hello, I'm
-        </motion.p>
-        
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="text-5xl md:text-7xl font-bold font-mono tracking-tight mb-6 text-glow"
-        >
-          <span className="text-foreground">Rohit</span>{" "}
-          <span className="text-primary">Kumar</span>
-        </motion.h1>
-        
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed"
-        >
-          B.Tech CSE Cloud Computing student at Shoolini University. I build impactful digital solutions — from AI-driven fitness tools to community platforms.
-        </motion.p>
-        
+    <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-16 px-6">
+      {/* Warm glow */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+        {/* Left */}
+        <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6"
+          >
+            <Sparkles size={16} />
+            Available for opportunities
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold leading-tight mb-4"
+          >
+            Hi, I'm Rohit{" "}
+            <span className="text-gradient">Kumar</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg md:text-xl font-heading font-semibold text-foreground mb-3"
+          >
+            B.Tech CSE | Cloud Computing Specialist
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-muted-foreground mb-8 max-w-md"
+          >
+            Building Scalable Cloud Solutions & Impactful Digital Experiences
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex items-center gap-4 mb-10"
+          >
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg gradient-amber text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity"
+            >
+              View My Work <ArrowRight size={16} />
+            </a>
+            <a
+              href="#contact"
+              className="px-6 py-3 rounded-lg border border-border text-foreground font-medium text-sm hover:bg-secondary transition-colors"
+            >
+              Get in Touch
+            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className="flex items-center gap-8"
+          >
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                <Code2 size={20} />
+              </div>
+              <div>
+                <p className="font-heading font-bold text-foreground">3+</p>
+                <p className="text-xs text-muted-foreground">Projects Delivered</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                <Cloud size={20} />
+              </div>
+              <div>
+                <p className="font-heading font-bold text-foreground">Cloud</p>
+                <p className="text-xs text-muted-foreground">Computing Expert</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Right — specialty cards */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex items-center justify-center gap-4"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="relative hidden md:block"
         >
-          <a
-            href="#projects"
-            className="px-6 py-3 rounded-lg bg-primary text-primary-foreground font-mono text-sm font-medium hover:opacity-90 transition-opacity"
-          >
-            View Projects
-          </a>
-          <a
-            href="#contact"
-            className="px-6 py-3 rounded-lg border border-border text-foreground font-mono text-sm font-medium hover:bg-secondary transition-colors"
-          >
-            Contact Me
-          </a>
+          <div className="relative w-full flex justify-center">
+            {/* Background cards for depth */}
+            <div className="absolute top-6 -right-4 w-64 h-72 rounded-2xl bg-muted/60 rotate-6" />
+            <div className="absolute top-3 -right-1 w-64 h-72 rounded-2xl bg-muted/80 rotate-3" />
+            {/* Main card */}
+            <div className="relative w-64 h-72 rounded-2xl gradient-amber p-6 text-primary-foreground flex flex-col justify-center shadow-xl">
+              <p className="text-xs uppercase tracking-widest opacity-80 mb-2">Specialization</p>
+              <h3 className="text-2xl font-heading font-bold mb-6">Cloud Computing</h3>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-primary-foreground/80" />
+                  AWS & GCP Certified
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-primary-foreground/80" />
+                  Kubernetes Expert
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-primary-foreground/80" />
+                  AI/ML Integration
+                </li>
+              </ul>
+            </div>
+          </div>
         </motion.div>
       </div>
-
-      {/* Decorative glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
     </section>
   );
 };
